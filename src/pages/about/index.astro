@@ -1,0 +1,262 @@
+---
+import Base from '../../layouts/Base.astro';
+import { withBase } from '../../utils/paths';
+---
+<Base
+  title="About"
+  description="About Inkwell Press — our history, mission, editorial team, and submission guidelines for the Inkwell Journal and book imprint."
+>
+
+  <!-- Page Hero -->
+  <section class="page-hero" aria-label="About Inkwell Press">
+    <div class="container">
+      <span class="page-hero-eyebrow">Our Story</span>
+      <h1 class="page-hero-title">About Inkwell Press</h1>
+      <p class="page-hero-desc">
+        Independent publishers of Buddhist literature and scholarship since 2010.
+      </p>
+    </div>
+  </section>
+
+  <!-- History & Mission -->
+  <section class="section section--cream" aria-labelledby="history-heading">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:4rem;align-items:start;">
+
+        <div>
+          <p class="section-eyebrow">History &amp; Mission</p>
+          <h2 id="history-heading">Why We Exist</h2>
+          <span class="gold-rule" aria-hidden="true"></span>
+
+          <div class="mission-body">
+            <p>
+              Inkwell Press was founded in Edinburgh in 2010 by Helena Drummond-Scott and
+              Roderick Cairns, two scholars who shared a conviction that the Buddhist literary
+              traditions deserved a publisher willing to do them justice — one that would
+              commission the finest translators, give scholars the time and editorial support
+              to produce lasting work, and refuse to sensationalise or simplify traditions of
+              extraordinary philosophical depth.
+            </p>
+            <p>
+              In an era of consolidation among publishing houses, Inkwell has remained resolutely
+              independent. We have no investors and no imprints to maintain. Our editorial decisions
+              are made on literary and scholarly grounds alone.
+            </p>
+            <p>
+              Over fifteen years we have published more than sixty titles spanning Tibetan,
+              Chinese, Japanese, Pali, and Sanskrit Buddhist traditions. Our journal, now in
+              its fourteenth year, has published work by scholars, translators, monks, nuns,
+              and lay practitioners from more than twenty countries.
+            </p>
+            <p>
+              We are a small press in the oldest sense: a group of people who care deeply about
+              books and believe that the right text in the right reader's hands can change a life.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <div style="background:var(--color-warm-paper);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:2rem;margin-bottom:1.5rem;">
+            <p class="section-eyebrow">At a Glance</p>
+            <dl style="display:flex;flex-direction:column;gap:1rem;margin-top:0.75rem;">
+              <div>
+                <dt style="font-family:var(--font-ui);font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-gold);margin-bottom:0.2rem;">Founded</dt>
+                <dd style="font-size:0.9375rem;color:var(--color-text);">2010, Edinburgh, Scotland</dd>
+              </div>
+              <div>
+                <dt style="font-family:var(--font-ui);font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-gold);margin-bottom:0.2rem;">Books Published</dt>
+                <dd style="font-size:0.9375rem;color:var(--color-text);">62 titles (2010–2025)</dd>
+              </div>
+              <div>
+                <dt style="font-family:var(--font-ui);font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-gold);margin-bottom:0.2rem;">Journal</dt>
+                <dd style="font-size:0.9375rem;color:var(--color-text);">Inkwell Journal, Vol. I–XIV (bi-annual)</dd>
+              </div>
+              <div>
+                <dt style="font-family:var(--font-ui);font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-gold);margin-bottom:0.2rem;">ISSN</dt>
+                <dd style="font-size:0.9375rem;color:var(--color-text);">2345-6789</dd>
+              </div>
+              <div>
+                <dt style="font-family:var(--font-ui);font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-gold);margin-bottom:0.2rem;">Distributor</dt>
+                <dd style="font-size:0.9375rem;color:var(--color-text);">Gardners Books (UK &amp; international)</dd>
+              </div>
+            </dl>
+          </div>
+
+          <blockquote>
+            "We believe that the Buddhist literary traditions of Asia represent one of
+            humanity's greatest intellectual and spiritual inheritances — and that the
+            finest scholarship can make them accessible without diminishing their depth."
+            <footer style="font-style:normal;margin-top:0.75rem;font-size:0.85rem;color:var(--color-muted);">— Helena Drummond-Scott, Founding Editor</footer>
+          </blockquote>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Editorial Team -->
+  <section class="section section--paper" aria-labelledby="team-heading">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <p class="section-eyebrow">The People</p>
+        <h2 id="team-heading">Editorial Team</h2>
+        <span class="gold-rule gold-rule--center" aria-hidden="true"></span>
+      </div>
+
+      <div class="team-grid">
+
+        <div class="team-card">
+          <div class="team-avatar" aria-hidden="true">HD</div>
+          <div class="team-name">Helena Drummond-Scott</div>
+          <div class="team-role">Founding Editor &amp; Publisher</div>
+          <p class="team-bio">
+            A scholar of Tibetan Buddhism and former lecturer at the University of Edinburgh,
+            Helena founded Inkwell after a decade in academic publishing. She has translated
+            two books of Tibetan poetry and serves on the editorial boards of several
+            Buddhist studies journals. Her particular interests are Nyingma literature and
+            the vernacular devotional traditions of Central Tibet.
+          </p>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar" aria-hidden="true">RC</div>
+          <div class="team-name">Roderick Cairns</div>
+          <div class="team-role">Co-Founder &amp; Senior Editor</div>
+          <p class="team-bio">
+            Roderick studied Classical Chinese and Japanese at Oxford before completing
+            a doctorate at SOAS on Chan/Zen literary culture. He oversees Inkwell's
+            East Asian list and serves as the founding editor of the journal. He has
+            edited or co-translated eleven books, including the widely-used anthology
+            <em>Voices from the Zendo</em>.
+          </p>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar" aria-hidden="true">NM</div>
+          <div class="team-name">Niamh MacAoidh</div>
+          <div class="team-role">Associate Editor &amp; Journal Editor</div>
+          <p class="team-bio">
+            Niamh joined Inkwell in 2018 after completing her doctorate at Trinity College
+            Dublin on contemporary Buddhist fiction in English. She manages the journal
+            submission process, commissions reviews, and is the primary editor for Inkwell's
+            creative writing list. She is also a practising poet with three collections
+            to her name.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Submission Guidelines -->
+  <section class="section section--cream" aria-labelledby="submissions-heading">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Open Submissions</p>
+        <h2 id="submissions-heading">Submission Guidelines</h2>
+        <span class="gold-rule" aria-hidden="true"></span>
+        <p class="section-subtitle">
+          We welcome submissions to the Inkwell Journal year-round. Book proposals are
+          accepted on a rolling basis. Please read the guidelines carefully before submitting.
+        </p>
+      </div>
+
+      <div class="guidelines-grid">
+
+        <div class="guideline-item">
+          <h4>Journal: Essays &amp; Criticism</h4>
+          <p>
+            We publish scholarly essays, critical appraisals, and accessible academic writing
+            engaging any aspect of Buddhist literary, philosophical, or artistic tradition.
+            Work should be rigorously argued but accessible to an educated general reader.
+          </p>
+          <ul style="margin-top:0.75rem;">
+            <li>Length: 4,000–10,000 words</li>
+            <li>Chicago citation style (notes and bibliography)</li>
+            <li>Abstract of 150 words required</li>
+            <li>Response time: 10–12 weeks</li>
+          </ul>
+        </div>
+
+        <div class="guideline-item">
+          <h4>Journal: Translation</h4>
+          <p>
+            We welcome translations from any Buddhist language tradition. Translators should
+            provide a brief introduction to the text, its context, and the translation choices
+            made. We ask that translators hold the rights or have obtained permissions.
+          </p>
+          <ul style="margin-top:0.75rem;">
+            <li>Length: Up to 8,000 words translated text</li>
+            <li>Introduction of 500–1,500 words</li>
+            <li>Source text or reference required</li>
+            <li>Response time: 10–12 weeks</li>
+          </ul>
+        </div>
+
+        <div class="guideline-item">
+          <h4>Journal: Creative Writing</h4>
+          <p>
+            Fiction, memoir, and creative nonfiction with a clear engagement with Buddhist
+            thought, practice, or culture. We are not looking for explicitly religious writing
+            but for work that grapples honestly with these traditions and the lives lived
+            within or alongside them.
+          </p>
+          <ul style="margin-top:0.75rem;">
+            <li>Prose: 2,000–6,000 words</li>
+            <li>Poetry: 3–8 poems per submission</li>
+            <li>Cover note of one paragraph</li>
+            <li>Response time: 10–12 weeks</li>
+          </ul>
+        </div>
+
+        <div class="guideline-item">
+          <h4>Book Proposals</h4>
+          <p>
+            We commission and acquire translations, scholarly monographs, essay collections,
+            and works of literary nonfiction and fiction. We do not publish dharma books,
+            meditation guides, or popular self-help. Please query before sending a full manuscript.
+          </p>
+          <ul style="margin-top:0.75rem;">
+            <li>Query letter of 1–2 pages</li>
+            <li>Synopsis and sample chapter or chapters</li>
+            <li>Brief biography and scholarly credentials</li>
+            <li>Response time: 12–16 weeks</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div style="margin-top:2.5rem;text-align:center;">
+        <p style="color:var(--color-muted);font-size:0.9375rem;margin-bottom:1.25rem;">
+          Send all submissions to: <a href="mailto:submissions@inkwellpress.co.uk" style="color:var(--color-navy);">submissions@inkwellpress.co.uk</a>
+        </p>
+        <a href={withBase('/contact/')} class="btn btn--primary">Contact Us</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Distribution -->
+  <section class="section--sm section--paper">
+    <div class="container">
+      <div style="max-width:640px;margin:0 auto;">
+        <p class="section-eyebrow">Distribution &amp; Rights</p>
+        <h3 style="color:var(--color-navy);margin-bottom:var(--space-sm);">Where to Buy Inkwell Books</h3>
+        <span class="gold-rule" aria-hidden="true"></span>
+        <p style="color:var(--color-muted);font-size:0.9375rem;line-height:1.8;margin-bottom:1rem;">
+          Inkwell Press titles are distributed in the United Kingdom and Ireland by
+          <strong>Gardners Books</strong>. In North America, our titles are available through
+          <strong>Ingram</strong>. For European and Australian orders, please contact us directly.
+          Most titles are also available through major online retailers.
+        </p>
+        <p style="color:var(--color-muted);font-size:0.9375rem;line-height:1.8;margin-bottom:1.5rem;">
+          For translation rights, film and audio rights, or institutional licensing enquiries,
+          please contact our rights department at
+          <a href="mailto:rights@inkwellpress.co.uk" style="color:var(--color-navy);">rights@inkwellpress.co.uk</a>.
+        </p>
+        <a href={withBase('/contact/')} class="btn btn--outline">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+</Base>

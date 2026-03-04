@@ -1,0 +1,30 @@
+{
+  "demo": true,
+  "demoMessage": "Sample template — Inkwell Press is a fictional publisher",
+  "site": {
+    "title": "Inkwell Press",
+    "description": "An independent publisher of Buddhist literature, translation, and scholarship — dedicated to bringing the wisdom traditions of Asia to contemporary readers.",
+    "url": "https://username.github.io",
+    "basePath": "",
+    "language": "en"
+  },
+  "navigation": {
+    "main": [
+      { "label": "Home",    "url": "/" },
+      { "label": "Books",   "url": "/books/" },
+      { "label": "Journal", "url": "/journal/" },
+      { "label": "About",   "url": "/about/" },
+      { "label": "Contact", "url": "/contact/" }
+    ]
+  },
+  "contact": {
+    "address": "14 Victoria Street, Edinburgh EH1 2HW, Scotland",
+    "email": "submissions@inkwellpress.co.uk",
+    "phone": ""
+  },
+  "seo": {
+    "titleTemplate": "%s — Inkwell Press",
+    "ogImage": ""
+  },
+  "jinpaKey": ""
+}

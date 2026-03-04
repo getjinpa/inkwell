@@ -1,0 +1,149 @@
+---
+import Base from '../../layouts/Base.astro';
+import { withBase } from '../../utils/paths';
+
+interface Essay {
+  category: string;
+  tagClass: string;
+  title: string;
+  author: string;
+  excerpt: string;
+}
+
+const essays: Essay[] = [
+  {
+    category: 'Translation',
+    tagClass: 'tag--translation',
+    title: 'The Seven Points of Mind Training: A New Critical Edition with Variant Readings',
+    author: 'Dr. Soren Halvorsen — University of Oslo',
+    excerpt: 'A fresh translation of Chekawa Yeshe Dorje\'s foundational lojong text, incorporating newly discovered manuscript variants from the Bhutanese National Library. The author argues that several key phrases in the standard version reflect a later editorial hand, and that the original text presented a more provisional view of self-cherishing as the root of suffering.',
+  },
+  {
+    category: 'Commentary',
+    tagClass: 'tag--commentary',
+    title: 'Emptiness and Ethics: Does Nagarjuna\'s Madhyamaka Undercut Moral Realism?',
+    author: 'Professor Anita Krishnaswamy — University of Edinburgh',
+    excerpt: 'The tension between Madhyamaka\'s rejection of inherent existence and the demands of a substantive Buddhist ethics has occupied philosophers for decades. This essay argues for a middle path that preserves conventional moral claims without reifying them, drawing on Tsongkhapa\'s distinction between ultimate and conventional analysis and recent work in metaethics.',
+  },
+  {
+    category: 'Interview',
+    tagClass: 'tag--interview',
+    title: '"The Text Is a Living Thing": A Conversation with Translator Sarah Harding',
+    author: 'Conducted by the Editors',
+    excerpt: 'Sarah Harding has spent four decades translating Tibetan Buddhist texts, including the landmark Machik\'s Complete Explanation. In this conversation, she speaks candidly about the ethics of translation, the impossible choices every translator faces, and why she believes the field is at an inflection point as the last holders of living oral lineages age.',
+  },
+  {
+    category: 'Fiction',
+    tagClass: 'tag--fiction',
+    title: 'The Rain That Fell in Ladakh',
+    author: 'Tenzin Palbar Norbu',
+    excerpt: 'A young monk in a remote Ladakhi gompa receives an unexpected letter that will unravel his understanding of his own origins. A quietly devastating story about belonging, impermanence, and the strange mercy of loss told across a single rainy afternoon and the memories it floods back. Winner of the 2024 Inkwell Fiction Prize.',
+  },
+  {
+    category: 'Poetry',
+    tagClass: 'tag--poetry',
+    title: 'Five Songs for the Bardo',
+    author: 'Deirdre MacCulloch',
+    excerpt: 'A sequence of five poems written in the aftermath of her mother\'s death, drawing on the Tibetan Book of the Dead as both structure and solace. MacCulloch braids medical fact — the clinical language of hospital records — with luminous images from the bardos of dying and becoming, producing something that is neither eulogy nor liturgy but partakes of both.',
+  },
+  {
+    category: 'Review',
+    tagClass: 'tag--review',
+    title: 'Mind in Tibetan Buddhism: A Review of Three Recent Translations',
+    author: 'Dr. Oliver St. Claire Pemberton',
+    excerpt: 'Three important texts on Tibetan Buddhist theories of mind have appeared in English translation within the past eighteen months: Mipham Rinpoche\'s Gateway to Knowledge, Düdjom Lingpa\'s Buddhahood Without Meditation, and Longchenpa\'s The Natural Freedom of Mind. This review essay considers each on its own terms and asks what, taken together, they reveal about the state of the field.',
+  },
+  {
+    category: 'Translation',
+    tagClass: 'tag--translation',
+    title: 'From the Blue Annals: Accounts of the Eleven-Faced Avalokiteshvara',
+    author: 'Tr. Dr. Isabelle Renard — CNRS Paris',
+    excerpt: 'Selected chapters from Gölo Zhönnu Pel\'s fifteenth-century history of Tibetan Buddhism, here translated into English for the first time. The passages focus on the cult of Avalokiteshvara in Central Tibet from the seventh through the fourteenth century, including previously unexamined accounts of the great image at Potala before the construction of the present palace.',
+  },
+  {
+    category: 'Commentary',
+    tagClass: 'tag--commentary',
+    title: 'Luminous Clarity and the Nature of Mind: Tathagatagarbha Doctrine in the Nyingma Tradition',
+    author: 'Professor Dorje Wangchuk — Hamburg University',
+    excerpt: 'This essay examines the distinctive Nyingma presentation of buddha-nature doctrine through close reading of three texts from the Longchen Nyingtik cycle, arguing that the tradition\'s equation of buddha-nature with rigpa represents a coherent philosophical position rather than the category mistake often attributed to it by critics within the Gelug tradition.',
+  },
+];
+---
+<Base
+  title="Journal"
+  description="Essays, translations, interviews, poetry, and reviews from the Inkwell Journal — Buddhist literature and scholarship for contemporary readers."
+>
+
+  <!-- Page Hero -->
+  <section class="page-hero" aria-label="Journal">
+    <div class="container">
+      <span class="page-hero-eyebrow">Inkwell Journal</span>
+      <h1 class="page-hero-title">Vol. XIV, Issue 2 — Autumn 2025</h1>
+      <p class="page-hero-desc">
+        Essays, translations, creative prose, poetry, and reviews from the world of Buddhist letters.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--cream" aria-label="Journal essays">
+    <div class="container">
+
+      <!-- Filter Bar -->
+      <div class="filter-bar" role="navigation" aria-label="Filter by category">
+        <span class="filter-label">Category:</span>
+        <button class="filter-btn is-active">All</button>
+        <button class="filter-btn">Translation</button>
+        <button class="filter-btn">Commentary</button>
+        <button class="filter-btn">Interview</button>
+        <button class="filter-btn">Fiction</button>
+        <button class="filter-btn">Poetry</button>
+        <button class="filter-btn">Review</button>
+      </div>
+
+      <!-- Essay List -->
+      <div class="essay-list" role="list">
+        {essays.map(essay => (
+          <article class="essay-item" role="listitem">
+            <div class="essay-item-main">
+              <div class="essay-meta">
+                <span class={`tag ${essay.tagClass}`}>{essay.category}</span>
+                <span class="essay-author">{essay.author}</span>
+              </div>
+              <a href="#" class="essay-title">{essay.title}</a>
+              <p class="essay-excerpt">{essay.excerpt}</p>
+            </div>
+            <div class="essay-action">
+              <a href="#" class="essay-link">Read essay →</a>
+            </div>
+          </article>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Past Issues Callout -->
+  <section class="section--sm section--paper">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:640px;margin:0 auto;">
+        <div>
+          <p class="section-eyebrow">Previous Issues</p>
+          <h3 style="color:var(--color-navy);font-size:1.1rem;margin-bottom:0.5rem;">Back Issues</h3>
+          <p style="font-size:0.9rem;color:var(--color-muted);margin-bottom:1rem;">
+            All back issues of the Inkwell Journal remain available in print and as PDF downloads for subscribers.
+          </p>
+          <a href="#" class="btn btn--outline btn--sm">Browse Archives</a>
+        </div>
+        <div>
+          <p class="section-eyebrow">Submissions</p>
+          <h3 style="color:var(--color-navy);font-size:1.1rem;margin-bottom:0.5rem;">Write for the Journal</h3>
+          <p style="font-size:0.9rem;color:var(--color-muted);margin-bottom:1rem;">
+            We accept essays, translations, creative prose, and poetry year-round. Response time: 10–12 weeks.
+          </p>
+          <a href={withBase('/about/')} class="btn btn--outline btn--sm">Submission Guidelines</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Base>

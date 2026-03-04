@@ -1,0 +1,179 @@
+---
+import Base from '../../layouts/Base.astro';
+import { withBase } from '../../utils/paths';
+
+interface Book {
+  title: string;
+  author: string;
+  category: string;
+  tagClass: string;
+  desc: string;
+  img: string;
+  imgAlt: string;
+}
+
+const books: Book[] = [
+  {
+    title: 'The Lamp of Clear Light: Mahamudra Teachings from the Kagyü Tradition',
+    author: 'Tr. Dr. Eleanor Whitmore',
+    category: 'Translation',
+    tagClass: 'tag--translation',
+    desc: 'A landmark translation of the complete Mahamudra transmission texts of the Third Karmapa Rangjung Dorje, rendered into English with extensive scholarly notes and oral commentary from Rumtek Monastery.',
+    img: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&q=75',
+    imgAlt: 'The Lamp of Clear Light',
+  },
+  {
+    title: 'Himalayan Letters: A Season at Kopan Monastery',
+    author: 'Margaret Finlay-Ross',
+    category: 'Memoir',
+    tagClass: 'tag--memoir',
+    desc: 'A Scottish schoolteacher arrives at Kopan Monastery outside Kathmandu expecting a quiet retreat and finds herself drawn into a year that will reshape everything she thought she knew about mind and world.',
+    img: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&q=75',
+    imgAlt: 'Himalayan Letters',
+  },
+  {
+    title: 'Songs of Milarepa: A Verse Translation',
+    author: 'Tr. James Forsythe-Webb',
+    category: 'Translation',
+    tagClass: 'tag--translation',
+    desc: 'The Hundred Thousand Songs of Milarepa rendered in fresh contemporary verse, preserving the lyric power and doctrinal precision of Tibet\'s most beloved poet-saint. With an introduction on the doha tradition.',
+    img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=75',
+    imgAlt: 'Songs of Milarepa',
+  },
+  {
+    title: 'The River and the Raft: Stories of the Tibetan Diaspora',
+    author: 'Karma Yangchen Lhamo',
+    category: 'Fiction',
+    tagClass: 'tag--fiction',
+    desc: 'Nine interconnected stories following Tibetan refugees from Lhasa to London, Dharamsala to Toronto — a tapestry of survival, memory, and the impossible weight of a culture carried in exile.',
+    img: 'https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=400&q=75',
+    imgAlt: 'The River and the Raft',
+  },
+  {
+    title: 'Dependent Origination: A Commentary on Candrakirti\'s Madhyamakavatara',
+    author: 'Dr. Rupert H. Sanderson',
+    category: 'Commentary',
+    tagClass: 'tag--commentary',
+    desc: 'A rigorous philosophical commentary drawing on the Gelug tradition\'s living oral commentary lineage. Sanderson navigates the most contested passages in Candrakirti\'s masterwork with unusual clarity and care.',
+    img: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=400&q=75',
+    imgAlt: 'Dependent Origination',
+  },
+  {
+    title: 'Night Flowers: Poems from a Chan Hermitage',
+    author: 'Tr. Dr. Fiona Acheson',
+    category: 'Poetry',
+    tagClass: 'tag--poetry',
+    desc: 'Selected poems from three Tang and Song dynasty Chan masters — Hanshan, Shide, and the lesser-known Puyuan — translated with an emphasis on their spare, paradoxical beauty rather than doctrinal interpretation.',
+    img: 'https://images.unsplash.com/photo-1455539946148-2afcad7df65e?w=400&q=75',
+    imgAlt: 'Night Flowers',
+  },
+  {
+    title: 'The Hidden Life of Pema Lingpa: A Sacred Biography',
+    author: 'Tr. Samten Gyatso with Nicholas Brown',
+    category: 'Translation',
+    tagClass: 'tag--translation',
+    desc: 'The first complete English translation of the terma biography of Bhutan\'s most revered treasure-revealer, Pema Lingpa (1450–1521), drawing on four manuscript traditions from the Royal Library of Bhutan.',
+    img: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=400&q=75',
+    imgAlt: 'The Hidden Life of Pema Lingpa',
+  },
+  {
+    title: 'Between Two Silences: A Memoir of Zen Practice',
+    author: 'Catherine Drummond',
+    category: 'Memoir',
+    tagClass: 'tag--memoir',
+    desc: 'Twenty years of sesshin practice distilled into a frank, unsentimental, and deeply moving account of what it means to sit with oneself — through marriage, illness, the death of a child, and the strange continuity of the breath.',
+    img: 'https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=400&q=75',
+    imgAlt: 'Between Two Silences',
+  },
+  {
+    title: 'The Treasury of Precious Qualities: Selected Chapters',
+    author: 'Jigme Lingpa; Tr. Dr. Alastair MacPherson',
+    category: 'Commentary',
+    tagClass: 'tag--commentary',
+    desc: 'A new translation of four pivotal chapters from Jigme Lingpa\'s Nyingma masterwork on the path to liberation, accompanied by excerpts from Kangyur Rinpoche\'s oral commentary and Dr. MacPherson\'s extensive notes.',
+    img: 'https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?w=400&q=75',
+    imgAlt: 'The Treasury of Precious Qualities',
+  },
+];
+---
+<Base
+  title="Books"
+  description="Browse the Inkwell Press catalog of Buddhist literature, translation, and scholarship — translations, commentary, poetry, fiction, and memoir."
+>
+
+  <!-- Page Hero -->
+  <section class="page-hero" aria-label="Books catalog">
+    <div class="container">
+      <span class="page-hero-eyebrow">Inkwell Press</span>
+      <h1 class="page-hero-title">Our Books</h1>
+      <p class="page-hero-desc">
+        Translation, commentary, poetry, fiction, and memoir — the full range of Buddhist literary expression.
+      </p>
+    </div>
+  </section>
+
+  <!-- Filter bar -->
+  <section class="section--sm section--paper">
+    <div class="container">
+      <div class="filter-bar" role="navigation" aria-label="Filter by category">
+        <span class="filter-label">Filter:</span>
+        <button class="filter-btn is-active">All</button>
+        <button class="filter-btn">Translation</button>
+        <button class="filter-btn">Commentary</button>
+        <button class="filter-btn">Poetry</button>
+        <button class="filter-btn">Fiction</button>
+        <button class="filter-btn">Memoir</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book Grid -->
+  <section class="section section--cream" aria-label="Book catalog grid">
+    <div class="container">
+      <div class="book-grid">
+        {books.map(book => (
+          <article class="book-card">
+            <div class="book-card-cover">
+              <img
+                src={book.img}
+                alt={book.imgAlt}
+                width="400"
+                height="220"
+                loading="lazy"
+              />
+            </div>
+            <div class="book-card-body">
+              <div class="book-card-tag">
+                <span class={`tag ${book.tagClass}`}>{book.category}</span>
+              </div>
+              <h2 class="book-card-title">{book.title}</h2>
+              <p class="book-card-author">{book.author}</p>
+              <p class="book-card-desc">{book.desc}</p>
+            </div>
+            <div class="book-card-footer">
+              <a href="#" class="btn btn--outline btn--sm" style="text-decoration:none;">More info →</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Distribution Callout -->
+  <section class="section--sm section--paper">
+    <div class="container">
+      <div class="submission-callout">
+        <p class="section-eyebrow">Distribution</p>
+        <h3>Order Inkwell Books</h3>
+        <span class="gold-rule gold-rule--center" aria-hidden="true"></span>
+        <p>
+          Inkwell Press titles are available through independent booksellers across the UK and
+          internationally through our distributor, Gardners Books. For institutional and library
+          orders, please contact us directly.
+        </p>
+        <a href={withBase('/contact/')} class="btn btn--primary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+</Base>

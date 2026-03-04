@@ -1,0 +1,104 @@
+---
+import { withBase, stripBase } from '../../utils/paths';
+
+interface Props { siteConfig: any; }
+const { siteConfig } = Astro.props;
+
+const navItems: { label: string; url: string }[] = siteConfig.navigation?.main ?? [];
+const currentPath = stripBase(Astro.url.pathname);
+
+function isActive(url: string): boolean {
+  if (url === '/') return currentPath === '/';
+  return currentPath.startsWith(url);
+}
+---
+<header class="site-header" role="banner">
+  <div class="container">
+    <div class="header-inner">
+
+      <!-- Logotype -->
+      <a href={withBase('/')} class="header-logotype" aria-label={siteConfig.site.title + ' — home'}>
+        <span class="logotype-primary">{siteConfig.site.title}</span>
+        <span class="logotype-secondary">Buddhist Literature &amp; Scholarship</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="site-nav" aria-label="Main navigation">
+        {navItems.map(item => (
+          <a
+            href={withBase(item.url)}
+            aria-current={isActive(item.url) ? 'page' : undefined}
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button
+        class="nav-toggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        id="nav-toggle-btn"
+      >
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Nav Overlay -->
+<nav class="mobile-nav" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close navigation menu">&times;</button>
+  <div class="mobile-nav-inner">
+    <a href={withBase('/')} class="mobile-nav-brand" id="mobile-nav-brand">{siteConfig.site.title}</a>
+    <div class="mobile-nav-rule"></div>
+    {navItems.map(item => (
+      <a href={withBase(item.url)} class="mobile-nav-link">{item.label}</a>
+    ))}
+  </div>
+</nav>
+
+<script>
+  const toggleBtn  = document.getElementById('nav-toggle-btn');
+  const mobileNav  = document.getElementById('mobile-nav');
+  const closeBtn   = document.getElementById('mobile-nav-close');
+
+  function openNav() {
+    mobileNav?.classList.add('is-open');
+    toggleBtn?.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    closeBtn?.focus();
+  }
+
+  function closeNav() {
+    mobileNav?.classList.remove('is-open');
+    toggleBtn?.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    toggleBtn?.focus();
+  }
+
+  toggleBtn?.addEventListener('click', openNav);
+  closeBtn?.addEventListener('click', closeNav);
+
+  // Close on link click
+  mobileNav?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeNav);
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileNav?.classList.contains('is-open')) {
+      closeNav();
+    }
+  });
+
+  // Close when clicking backdrop (outside mobile-nav-inner)
+  mobileNav?.addEventListener('click', (e) => {
+    if (e.target === mobileNav) closeNav();
+  });
+</script>

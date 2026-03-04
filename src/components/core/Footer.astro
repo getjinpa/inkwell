@@ -1,0 +1,70 @@
+---
+import { withBase } from '../../utils/paths';
+
+interface Props { siteConfig: any; }
+const { siteConfig } = Astro.props;
+
+const year = new Date().getFullYear();
+---
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <!-- Brand column -->
+      <div class="footer-col">
+        <div class="footer-brand-name">{siteConfig.site.title}</div>
+        <p class="footer-brand-tagline">
+          An independent publisher of Buddhist literature, translation, and
+          scholarship — based in Edinburgh, Scotland.
+        </p>
+        <span class="footer-issn">ISSN 2345-6789</span>
+      </div>
+
+      <!-- About / Catalog -->
+      <div class="footer-col">
+        <div class="footer-col-heading">Catalog</div>
+        <nav class="footer-nav" aria-label="Catalog links">
+          <a href={withBase('/books/')}>All Books</a>
+          <a href={withBase('/books/')}>Translations</a>
+          <a href={withBase('/books/')}>Poetry</a>
+          <a href={withBase('/books/')}>Commentary</a>
+          <a href={withBase('/books/')}>Memoir</a>
+        </nav>
+      </div>
+
+      <!-- Journal -->
+      <div class="footer-col">
+        <div class="footer-col-heading">Journal</div>
+        <nav class="footer-nav" aria-label="Journal links">
+          <a href={withBase('/journal/')}>Current Issue</a>
+          <a href={withBase('/journal/')}>Essays</a>
+          <a href={withBase('/journal/')}>Translations</a>
+          <a href={withBase('/journal/')}>Reviews</a>
+          <a href={withBase('/about/')}>Submissions</a>
+        </nav>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <div class="footer-col-heading">Contact</div>
+        <address class="footer-address">
+          {siteConfig.contact.address}<br /><br />
+          <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a><br /><br />
+          <a href={withBase('/contact/')}>Send a message →</a>
+        </address>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-copyright">
+        &copy; {year} {siteConfig.site.title}. All rights reserved.
+      </span>
+      <a href="https://getjinpa.github.io" class="footer-jinpa" target="_blank" rel="noopener noreferrer">
+        Built with Jinpa
+      </a>
+    </div>
+
+  </div>
+</footer>

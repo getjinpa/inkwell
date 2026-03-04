@@ -1,0 +1,243 @@
+---
+import Base from '../layouts/Base.astro';
+import { withBase } from '../utils/paths';
+---
+<Base
+  title="Buddhist Literature & Scholarship"
+  description="An independent publisher of Buddhist literature, translation, and scholarship — dedicated to bringing the wisdom traditions of Asia to contemporary readers."
+>
+
+  <!-- ═══════════════════════════════════════════
+       HERO MASTHEAD
+  ═══════════════════════════════════════════ -->
+  <section class="hero-masthead" aria-label="Site masthead">
+    <div class="container">
+      <span class="masthead-issue">Vol. XIV, Issue 2 &nbsp;·&nbsp; Autumn 2025</span>
+      <h1 class="masthead-title">Inkwell Press</h1>
+      <span class="masthead-rule" aria-hidden="true"></span>
+      <p class="masthead-subtitle">Publishing Buddhism's living wisdom since 2010</p>
+      <div class="masthead-actions">
+        <a href={withBase('/books/')} class="btn btn--outline-cream btn--lg" style="margin-top:1.75rem;margin-right:0.75rem;">Browse Catalog</a>
+        <a href={withBase('/journal/')} class="btn btn--outline-gold btn--lg" style="margin-top:1.75rem;">Read the Journal</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FEATURED BOOK OF THE SEASON
+  ═══════════════════════════════════════════ -->
+  <section class="section section--cream" aria-labelledby="featured-heading">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Featured Book of the Season</p>
+      </div>
+      <div class="featured-book">
+        <div class="featured-book-cover">
+          <img
+            src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80"
+            alt="The Lamp of Clear Light — book cover"
+            width="600"
+            height="420"
+            loading="eager"
+          />
+        </div>
+        <div class="featured-book-text">
+          <p class="featured-book-season">Autumn Selection</p>
+          <h2 id="featured-heading" class="featured-book-title">The Lamp of Clear Light: Mahamudra Teachings from the Kagyü Tradition</h2>
+          <p class="featured-book-author">Translated by Dr. Eleanor Whitmore<br>with a foreword by Geshe Pema Dorje</p>
+          <div class="gold-rule"></div>
+          <p class="featured-book-desc">
+            A landmark translation of the complete Mahamudra transmission texts of the Third Karmapa Rangjung Dorje, rendered into elegant English for the first time. Drawing on three generations of oral commentary from Rumtek Monastery, Dr. Whitmore's translation illuminates the subtlest levels of mind with scholarly precision and contemplative depth.
+          </p>
+          <p class="featured-book-desc">
+            "One of the most important Buddhist texts to appear in English this decade." — <em>Journal of Buddhist Studies</em>
+          </p>
+          <div class="featured-book-actions">
+            <a href="#" class="btn btn--gold btn--lg">Order Now</a>
+            <a href={withBase('/books/')} class="btn btn--outline btn--lg">View All Books</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FROM THE JOURNAL
+  ═══════════════════════════════════════════ -->
+  <section class="section section--paper" aria-labelledby="journal-heading">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <p class="section-eyebrow">From the Journal</p>
+        <h2 id="journal-heading">Recent Essays &amp; Translations</h2>
+        <span class="gold-rule gold-rule--center" aria-hidden="true"></span>
+        <p class="section-subtitle">
+          Scholarly essays, translations, and creative work from our current issue.
+        </p>
+      </div>
+
+      <div class="journal-cards">
+        <!-- Card 1 -->
+        <article class="journal-card">
+          <div class="journal-card-tag">
+            <span class="tag tag--translation">Translation</span>
+          </div>
+          <h3 class="journal-card-title">The Seven Points of Mind Training: A New Critical Edition</h3>
+          <p class="journal-card-author">By Dr. Soren Halvorsen</p>
+          <p class="journal-card-excerpt">
+            A fresh translation of Chekawa Yeshe Dorje's foundational lojong text, incorporating newly discovered manuscript variants from the Bhutanese National Library. With extensive notes on contested passages in the root text.
+          </p>
+          <a href={withBase('/journal/')} class="journal-card-link">Read essay →</a>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="journal-card">
+          <div class="journal-card-tag">
+            <span class="tag tag--commentary">Commentary</span>
+          </div>
+          <h3 class="journal-card-title">Emptiness and Ethics: Does Nagarjuna's Madhyamaka Undercut Moral Realism?</h3>
+          <p class="journal-card-author">By Professor Anita Krishnaswamy</p>
+          <p class="journal-card-excerpt">
+            The tension between Madhyamaka's rejection of inherent existence and the demands of a substantive Buddhist ethics has occupied philosophers for decades. This essay argues for a middle path that preserves conventional moral claims without reifying them.
+          </p>
+          <a href={withBase('/journal/')} class="journal-card-link">Read essay →</a>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="journal-card">
+          <div class="journal-card-tag">
+            <span class="tag tag--fiction">Fiction</span>
+          </div>
+          <h3 class="journal-card-title">The Rain That Fell in Ladakh</h3>
+          <p class="journal-card-author">By Tenzin Palbar Norbu</p>
+          <p class="journal-card-excerpt">
+            A young monk in a remote Ladakhi gompa receives an unexpected letter that will unravel his understanding of his own origins. A quietly devastating story about belonging, impermanence, and the strange mercy of loss.
+          </p>
+          <a href={withBase('/journal/')} class="journal-card-link">Read essay →</a>
+        </article>
+      </div>
+
+      <div class="text-center" style="margin-top:2.5rem;">
+        <a href={withBase('/journal/')} class="btn btn--outline">See All Journal Issues</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       RECENT PUBLICATIONS
+  ═══════════════════════════════════════════ -->
+  <section class="section section--cream" aria-labelledby="recent-heading">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Recent Publications</p>
+        <h2 id="recent-heading">New from Inkwell</h2>
+        <span class="gold-rule" aria-hidden="true"></span>
+      </div>
+
+      <div class="books-row">
+        <a href={withBase('/books/')} class="books-row-item">
+          <div class="books-row-cover">
+            <img
+              src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=300&q=75"
+              alt="Himalayan Letters — book cover"
+              width="300"
+              height="180"
+              loading="lazy"
+            />
+          </div>
+          <div class="books-row-title">Himalayan Letters: A Season at Kopan Monastery</div>
+          <div class="books-row-author">Margaret Finlay-Ross</div>
+        </a>
+
+        <a href={withBase('/books/')} class="books-row-item">
+          <div class="books-row-cover">
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=75"
+              alt="Songs of Milarepa — book cover"
+              width="300"
+              height="180"
+              loading="lazy"
+            />
+          </div>
+          <div class="books-row-title">Songs of Milarepa: A Verse Translation</div>
+          <div class="books-row-author">Tr. James Forsythe-Webb</div>
+        </a>
+
+        <a href={withBase('/books/')} class="books-row-item">
+          <div class="books-row-cover">
+            <img
+              src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=300&q=75"
+              alt="The River and the Raft — book cover"
+              width="300"
+              height="180"
+              loading="lazy"
+            />
+          </div>
+          <div class="books-row-title">The River and the Raft: Stories of the Tibetan Diaspora</div>
+          <div class="books-row-author">Karma Yangchen Lhamo</div>
+        </a>
+
+        <a href={withBase('/books/')} class="books-row-item">
+          <div class="books-row-cover">
+            <img
+              src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=300&q=75"
+              alt="Dependent Origination — book cover"
+              width="300"
+              height="180"
+              loading="lazy"
+            />
+          </div>
+          <div class="books-row-title">Dependent Origination: A Commentary on Candrakirti</div>
+          <div class="books-row-author">Dr. Rupert H. Sanderson</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT BLURB STRIP
+  ═══════════════════════════════════════════ -->
+  <section class="section section--navy" aria-label="About Inkwell Press">
+    <div class="container">
+      <div class="about-strip">
+        <p class="section-eyebrow text-gold" style="text-align:center;">Our Mission</p>
+        <span class="gold-rule gold-rule--center" aria-hidden="true"></span>
+        <p class="about-strip-quote">
+          "We believe that the Buddhist literary traditions of Asia represent one of
+          humanity's greatest intellectual and spiritual inheritances — and that the finest
+          scholarship and translation can make them accessible without diminishing
+          their depth."
+        </p>
+        <p style="color:rgba(248,244,232,0.6);font-size:0.875rem;font-style:italic;margin-bottom:1.75rem;">
+          — Helena Drummond-Scott, Founding Editor
+        </p>
+        <a href={withBase('/about/')} class="btn btn--outline-cream">About Inkwell Press</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SUBMISSIONS CALLOUT
+  ═══════════════════════════════════════════ -->
+  <section class="section section--cream" aria-label="Submissions">
+    <div class="container">
+      <div class="submission-callout">
+        <p class="section-eyebrow">Open Submissions</p>
+        <h3>Write for Inkwell Journal</h3>
+        <span class="gold-rule gold-rule--center" aria-hidden="true"></span>
+        <p>
+          We welcome essays, translations, creative prose, and poetry engaging the Buddhist
+          literary and philosophical traditions. Submissions are open year-round.
+          Response time: 10–12 weeks.
+        </p>
+        <a href={withBase('/about/')} class="btn btn--primary">Submission Guidelines</a>
+      </div>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .masthead-actions {
+    margin-top: 0.25rem;
+  }
+</style>
