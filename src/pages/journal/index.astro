@@ -8,70 +8,79 @@ interface Essay {
   title: string;
   author: string;
   excerpt: string;
+  slug: string;
 }
 
 const essays: Essay[] = [
   {
-    category: 'Translation',
-    tagClass: 'tag--translation',
-    title: 'The Seven Points of Mind Training: A New Critical Edition with Variant Readings',
-    author: 'Dr. Soren Halvorsen — University of Oslo',
-    excerpt: 'A fresh translation of Chekawa Yeshe Dorje\'s foundational lojong text, incorporating newly discovered manuscript variants from the Bhutanese National Library. The author argues that several key phrases in the standard version reflect a later editorial hand, and that the original text presented a more provisional view of self-cherishing as the root of suffering.',
+    category: "Translation",
+    tagClass: "tag--translation",
+    title: "The Seven Points of Mind Training: A New Critical Edition with Variant Readings",
+    author: "Dr. Soren Halvorsen — University of Oslo",
+    excerpt: "A fresh translation of Chekawa Yeshe Dorje’s foundational lojong text, incorporating newly discovered manuscript variants from the Bhutanese National Library. The author argues that several key phrases in the standard version reflect a later editorial hand, and that the original text presented a more provisional view of self-cherishing as the root of suffering.",
+    slug: "seven-points-mind-training",
   },
   {
-    category: 'Commentary',
-    tagClass: 'tag--commentary',
-    title: 'Emptiness and Ethics: Does Nagarjuna\'s Madhyamaka Undercut Moral Realism?',
-    author: 'Professor Anita Krishnaswamy — University of Edinburgh',
-    excerpt: 'The tension between Madhyamaka\'s rejection of inherent existence and the demands of a substantive Buddhist ethics has occupied philosophers for decades. This essay argues for a middle path that preserves conventional moral claims without reifying them, drawing on Tsongkhapa\'s distinction between ultimate and conventional analysis and recent work in metaethics.',
+    category: "Commentary",
+    tagClass: "tag--commentary",
+    title: "Emptiness and Ethics: Does Nagarjuna’s Madhyamaka Undercut Moral Realism?",
+    author: "Professor Anita Krishnaswamy — University of Edinburgh",
+    excerpt: "The tension between Madhyamaka’s rejection of inherent existence and the demands of a substantive Buddhist ethics has occupied philosophers for decades. This essay argues for a middle path that preserves conventional moral claims without reifying them, drawing on Tsongkhapa’s distinction between ultimate and conventional analysis and recent work in metaethics.",
+    slug: "emptiness-and-ethics",
   },
   {
-    category: 'Interview',
-    tagClass: 'tag--interview',
-    title: '"The Text Is a Living Thing": A Conversation with Translator Sarah Harding',
-    author: 'Conducted by the Editors',
-    excerpt: 'Sarah Harding has spent four decades translating Tibetan Buddhist texts, including the landmark Machik\'s Complete Explanation. In this conversation, she speaks candidly about the ethics of translation, the impossible choices every translator faces, and why she believes the field is at an inflection point as the last holders of living oral lineages age.',
+    category: "Interview",
+    tagClass: "tag--interview",
+    title: "“The Text Is a Living Thing”: A Conversation with Translator Sarah Harding",
+    author: "Conducted by the Editors",
+    excerpt: "Sarah Harding has spent four decades translating Tibetan Buddhist texts, including the landmark Machik’s Complete Explanation. In this conversation, she speaks candidly about the ethics of translation, the impossible choices every translator faces, and why she believes the field is at an inflection point as the last holders of living oral lineages age.",
+    slug: "text-is-a-living-thing",
   },
   {
-    category: 'Fiction',
-    tagClass: 'tag--fiction',
-    title: 'The Rain That Fell in Ladakh',
-    author: 'Tenzin Palbar Norbu',
-    excerpt: 'A young monk in a remote Ladakhi gompa receives an unexpected letter that will unravel his understanding of his own origins. A quietly devastating story about belonging, impermanence, and the strange mercy of loss told across a single rainy afternoon and the memories it floods back. Winner of the 2024 Inkwell Fiction Prize.',
+    category: "Fiction",
+    tagClass: "tag--fiction",
+    title: "The Rain That Fell in Ladakh",
+    author: "Tenzin Palbar Norbu",
+    excerpt: "A young monk in a remote Ladakhi gompa receives an unexpected letter that will unravel his understanding of his own origins. A quietly devastating story about belonging, impermanence, and the strange mercy of loss told across a single rainy afternoon and the memories it floods back. Winner of the 2024 Inkwell Fiction Prize.",
+    slug: "rain-that-fell-in-ladakh",
   },
   {
-    category: 'Poetry',
-    tagClass: 'tag--poetry',
-    title: 'Five Songs for the Bardo',
-    author: 'Deirdre MacCulloch',
-    excerpt: 'A sequence of five poems written in the aftermath of her mother\'s death, drawing on the Tibetan Book of the Dead as both structure and solace. MacCulloch braids medical fact — the clinical language of hospital records — with luminous images from the bardos of dying and becoming, producing something that is neither eulogy nor liturgy but partakes of both.',
+    category: "Poetry",
+    tagClass: "tag--poetry",
+    title: "Five Songs for the Bardo",
+    author: "Deirdre MacCulloch",
+    excerpt: "A sequence of five poems written in the aftermath of her mother’s death, drawing on the Tibetan Book of the Dead as both structure and solace. MacCulloch braids medical fact — the clinical language of hospital records — with luminous images from the bardos of dying and becoming, producing something that is neither eulogy nor liturgy but partakes of both.",
+    slug: "five-songs-for-the-bardo",
   },
   {
-    category: 'Review',
-    tagClass: 'tag--review',
-    title: 'Mind in Tibetan Buddhism: A Review of Three Recent Translations',
-    author: 'Dr. Oliver St. Claire Pemberton',
-    excerpt: 'Three important texts on Tibetan Buddhist theories of mind have appeared in English translation within the past eighteen months: Mipham Rinpoche\'s Gateway to Knowledge, Düdjom Lingpa\'s Buddhahood Without Meditation, and Longchenpa\'s The Natural Freedom of Mind. This review essay considers each on its own terms and asks what, taken together, they reveal about the state of the field.',
+    category: "Review",
+    tagClass: "tag--review",
+    title: "Mind in Tibetan Buddhism: A Review of Three Recent Translations",
+    author: "Dr. Oliver St. Claire Pemberton",
+    excerpt: "Three important texts on Tibetan Buddhist theories of mind have appeared in English translation within the past eighteen months: Mipham Rinpoche’s Gateway to Knowledge, Düdjom Lingpa’s Buddhahood Without Meditation, and Longchenpa’s The Natural Freedom of Mind. This review essay considers each on its own terms and asks what, taken together, they reveal about the state of the field.",
+    slug: "mind-in-tibetan-buddhism-review",
   },
   {
-    category: 'Translation',
-    tagClass: 'tag--translation',
-    title: 'From the Blue Annals: Accounts of the Eleven-Faced Avalokiteshvara',
-    author: 'Tr. Dr. Isabelle Renard — CNRS Paris',
-    excerpt: 'Selected chapters from Gölo Zhönnu Pel\'s fifteenth-century history of Tibetan Buddhism, here translated into English for the first time. The passages focus on the cult of Avalokiteshvara in Central Tibet from the seventh through the fourteenth century, including previously unexamined accounts of the great image at Potala before the construction of the present palace.',
+    category: "Translation",
+    tagClass: "tag--translation",
+    title: "From the Blue Annals: Accounts of the Eleven-Faced Avalokiteshvara",
+    author: "Tr. Dr. Isabelle Renard — CNRS Paris",
+    excerpt: "Selected chapters from Gölo Zhönnu Pel’s fifteenth-century history of Tibetan Buddhism, here translated into English for the first time. The passages focus on the cult of Avalokiteshvara in Central Tibet from the seventh through the fourteenth century, including previously unexamined accounts of the great image at Potala before the construction of the present palace.",
+    slug: "from-the-blue-annals",
   },
   {
-    category: 'Commentary',
-    tagClass: 'tag--commentary',
-    title: 'Luminous Clarity and the Nature of Mind: Tathagatagarbha Doctrine in the Nyingma Tradition',
-    author: 'Professor Dorje Wangchuk — Hamburg University',
-    excerpt: 'This essay examines the distinctive Nyingma presentation of buddha-nature doctrine through close reading of three texts from the Longchen Nyingtik cycle, arguing that the tradition\'s equation of buddha-nature with rigpa represents a coherent philosophical position rather than the category mistake often attributed to it by critics within the Gelug tradition.',
+    category: "Commentary",
+    tagClass: "tag--commentary",
+    title: "Luminous Clarity and the Nature of Mind: Tathagatagarbha Doctrine in the Nyingma Tradition",
+    author: "Professor Dorje Wangchuk — Hamburg University",
+    excerpt: "This essay examines the distinctive Nyingma presentation of buddha-nature doctrine through close reading of three texts from the Longchen Nyingtik cycle, arguing that the tradition’s equation of buddha-nature with rigpa represents a coherent philosophical position rather than the category mistake often attributed to it by critics within the Gelug tradition.",
+    slug: "luminous-clarity-nature-of-mind",
   },
 ];
 ---
 <Base
   title="Journal"
-  description="Essays, translations, interviews, poetry, and reviews from the Inkwell Journal — Buddhist literature and scholarship for contemporary readers."
+  description="Essays, translations, interviews, poetry, and reviews from the Inkwell Journal."
 >
 
   <!-- Page Hero -->
@@ -109,11 +118,11 @@ const essays: Essay[] = [
                 <span class={`tag ${essay.tagClass}`}>{essay.category}</span>
                 <span class="essay-author">{essay.author}</span>
               </div>
-              <a href="#" class="essay-title">{essay.title}</a>
+              <a href={withBase('/journal/' + essay.slug + '/')} class="essay-title">{essay.title}</a>
               <p class="essay-excerpt">{essay.excerpt}</p>
             </div>
             <div class="essay-action">
-              <a href="#" class="essay-link">Read essay →</a>
+              <a href={withBase('/journal/' + essay.slug + '/')} class="essay-link">Read essay →</a>
             </div>
           </article>
         ))}
