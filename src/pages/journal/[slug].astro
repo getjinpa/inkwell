@@ -2,6 +2,19 @@
 import Base from '../../layouts/Base.astro';
 import { withBase } from '../../utils/paths';
 
+export function getStaticPaths() {
+  return [
+    { params: { slug: 'seven-points-mind-training' } },
+    { params: { slug: 'emptiness-and-ethics' } },
+    { params: { slug: 'text-is-a-living-thing' } },
+    { params: { slug: 'rain-that-fell-in-ladakh' } },
+    { params: { slug: 'five-songs-for-the-bardo' } },
+    { params: { slug: 'mind-in-tibetan-buddhism-review' } },
+    { params: { slug: 'from-the-blue-annals' } },
+    { params: { slug: 'luminous-clarity-nature-of-mind' } },
+  ];
+}
+
 const { slug } = Astro.params;
 ---
 
